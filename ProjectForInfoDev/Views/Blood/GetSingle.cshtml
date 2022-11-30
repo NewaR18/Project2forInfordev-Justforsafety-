@@ -1,0 +1,73 @@
+﻿@model ProjectForInfoDev.Models.Blood
+
+@{
+    ViewData["Title"] = "GetSingle";
+}
+<img src="~/mycover.jpg" alt="photos" class="img-fluid mr-md-3" width="100%"  /><br/><br/><br/>
+
+<h4 style="color:#660000">Hospital Details</h4>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Hospital Name
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HospitalName)
+        </dd>
+        <dt class = "col-sm-2">
+            A Positive
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Apositive)
+        </dd>
+        <dt class = "col-sm-2">
+            A Negative
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Anegative)
+        </dd>
+        <dt class = "col-sm-2">
+            B Positive
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bpositive)
+        </dd>
+        <dt class = "col-sm-2">
+            B Negative
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Bnegative)
+        </dd>
+        <dt class = "col-sm-2">
+            AB Positive
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ABpositive)
+        </dd>
+        <dt class = "col-sm-2">
+            AB Negative
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ABnegative)
+        </dd>
+        <dt class = "col-sm-2">
+            O Positive
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Opositive)
+        </dd>
+        <dt class = "col-sm-2">
+            O Negative
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Onegative)
+        </dd>
+        <dt class = "col-sm-2">
+            Last Reviewed On
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastReviewed)
+        </dd>
+    </dl>
+</div>

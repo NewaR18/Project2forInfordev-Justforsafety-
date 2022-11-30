@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ProjectForInfoDev.Models.Blood>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<img src="~/mycover.jpg" alt="photos" class="img-fluid mr-md-3" width="100%"  /><br/><br/><br/>
+
+<h4 style="color:#660000">Central Database Management System</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Hospital Name</th>
+            <th>A Positive</th>
+            <th>A Negative</th>
+            <th>B Positive</th>
+            <th>B Negative</th>
+            <th>AB Positive</th>
+            <th>AB Negative</th>
+            <th>O Positive</th>
+            <th>O Negative</th>
+            <th>Last Reviewed On</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HospitalName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apositive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anegative)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bpositive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bnegative)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ABpositive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ABnegative)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Opositive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Onegative)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastReviewed)
+            </td>
+            <td>
+                <a asp-action="editing" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="GetSingle" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="deleting" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div style="margin:25px 25px 5px 25px; border:2px solid; padding:5px; background-color:rgb(102,0,0); width:170px;">
+    <a asp-action="Create" style="color:white; text-decoration:none;">Hospital Registration</a>
+</div>

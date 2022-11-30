@@ -1,0 +1,88 @@
+﻿@model ProjectForInfoDev.Models.Blood
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<img src="~/mycover.jpg" alt="photos" class="img-fluid mr-md-3" width="100%"  /><br/><br/><br/>
+
+<h4 style="color:#660000">Creating New Entity</h4>
+<hr />
+<div class="form-row">
+    <div class="col-md-6" style="padding:40px;">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="HospitalName" class="control-label">Hospital Name: </label>
+                <input asp-for="HospitalName" class="form-control" />
+                <span asp-validation-for="HospitalName" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="d-flex justify-content-between">
+            <div class="form-group col-md-5">
+                <label asp-for="Apositive" class="control-label">A Positive(in litres):</label>
+                <input asp-for="Apositive" class="form-control" />
+                <span asp-validation-for="Apositive" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-5">
+                <label asp-for="Anegative" class="control-label">A Negative(in liters):</label>
+                <input asp-for="Anegative" class="form-control" />
+                <span asp-validation-for="Anegative" class="text-danger"></span>
+            </div>
+            </div>
+            <br/>
+            <div class="d-flex justify-content-between">
+            <div class="form-group col-md-5">
+                <label asp-for="Bpositive" class="control-label">B Positive(in litres):</label>
+                <input asp-for="Bpositive" class="form-control" />
+                <span asp-validation-for="Bpositive" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-5">
+                <label asp-for="Bnegative" class="control-label">B Negative(in liters):</label>
+                <input asp-for="Bnegative" class="form-control" />
+                <span asp-validation-for="Bnegative" class="text-danger"></span>
+            </div>
+            </div>
+            <br/>
+            <div class="d-flex justify-content-between">
+            <div class="form-group col-md-5">
+                <label asp-for="ABpositive" class="control-label">AB Positive(in litres):</label>
+                <input asp-for="ABpositive" class="form-control" />
+                <span asp-validation-for="ABpositive" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-5">
+                <label asp-for="ABnegative" class="control-label">AB Negative(in liters):</label>
+                <input asp-for="ABnegative" class="form-control" />
+                <span asp-validation-for="ABnegative" class="text-danger"></span>
+            </div>
+            </div>
+           <br/>
+            <div class="d-flex justify-content-between">
+            <div class="form-group col-md-5">
+                <label asp-for="Opositive" class="control-label">O Positive(in litres):</label>
+                <input asp-for="Opositive" class="form-control" />
+                <span asp-validation-for="Opositive" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-5">
+                <label asp-for="Onegative" class="control-label">O Negative(in liters):</label>
+                <input asp-for="Onegative" class="form-control" />
+                <span asp-validation-for="Onegative" class="text-danger"></span>
+            </div>
+            </div>
+            <br/>
+            <div class="form-group">
+                <label asp-for="LastReviewed" class="control-label">Last Reviewed On:</label>
+                <input asp-for="LastReviewed" class="form-control" />
+                <span asp-validation-for="LastReviewed" class="text-danger"></span>
+            </div>
+            <br/>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn" style="background-color:#660000; color:white;" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

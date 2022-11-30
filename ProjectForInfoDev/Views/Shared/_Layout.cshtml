@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProjectForInfoDev</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site2.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjectForInfoDev.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white justify-content-around" style="color:#660000">
+            <div class="container-fluid">
+                <div>
+                <a class="navbar-brand" asp-area="" asp-controller="Blood" asp-action="Home">ProjectForInfoDev</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                </div>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Blood" asp-action="Home" style="color:#660000;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Blood" asp-action="Create" style="color:#660000;">Registration</a>
+                        </li>
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Blood" asp-action="Index" style="color:#660000;">Datas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Blood" asp-action="ReviewForm" style="color:#660000;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer>
+        <div style="display:flex; justify-content:space-evenly; background-color:rgba(102,0,0,0.8); color:#BBBBBB; font-family:sans-serif; width:1300px; height:300px;">
+            <div>
+                <h4>InfodevProject</h4>
+                <h5>Deadline: November 15, 2022</h5>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <h5 style="margin-left:15px;"><a asp-area="" asp-controller="Blood" asp-action="Home" style="color:#BBBBBB; text-decoration:none;">Home</a></h5>
+                <h5 style="margin-left:15px;"><a asp-area="" asp-controller="Blood" asp-action="Create" style="color:#BBBBBB; text-decoration:none;">Registration</a></h5>
+                <h5 style="margin-left:15px;"><a asp-area="" asp-controller="Blood" asp-action="Index" style="color:#BBBBBB; text-decoration:none;">Datas</a></h5>
+                <h5 style="margin-left:15px;"><a asp-area="" asp-controller="Blood" asp-action="ReviewForm" style="color:#BBBBBB; text-decoration:none;">Contact</a></h5>
+            </div>
+            <div style="margin:90px 0px 5px 0px; color: #BBBBBB">
+                <h5>17 Tarakeshwor Manamaiju Ward 13 Thuloinaar 44601</h5>
+                <h5>+977 9817826391, +977 9861987126</h5>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
